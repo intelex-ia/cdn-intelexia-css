@@ -1,0 +1,9 @@
+/*!
+ * cdn-intelexia Reset (scoped to blog post content)
+ * Escopo: apenas dentro de .article
+ */
+.article, .article *, .article *::before, .article *::after { box-sizing: border-box; }
+.article img, .article picture, .article video, .article canvas, .article svg { display: block; max-width: 100%; height: auto; }
+.article input, .article button, .article textarea, .article select { font: inherit; }
+.article a { color: inherit; text-decoration: none; }
+.article table { border-collapse: separate; border-spacing: 0; }

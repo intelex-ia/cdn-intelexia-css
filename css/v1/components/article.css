@@ -1,0 +1,91 @@
+/*!
+ * cdn-intelexia — Article components (scoped)
+ * Escopo: apenas dentro de .article
+ */
+
+/* Header/Meta/Kicker */
+.article .kicker {
+  color: var(--color-text-muted);
+  font-size: var(--fs-300);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: var(--s4) 0 var(--s2);
+}
+
+.article .meta {
+  display: flex;
+  gap: var(--s3);
+  align-items: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: var(--s2) 0 var(--s6);
+}
+
+.article .badge {
+  border: 1px solid var(--color-badge-border);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: var(--color-badge-bg);
+}
+
+/* Headings spacing inside article content */
+.article h2 { margin: var(--s8) 0 var(--s3); }
+.article h3 { margin: var(--s6) 0 var(--s2); }
+
+/* Lists */
+.article ul,
+.article ol {
+  margin: var(--s3) 0;
+  padding-inline-start: 1.2rem;
+}
+
+/* Horizontal rule helper */
+.article .hr {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--s8) 0;
+}
+
+/* Info/highlight/note boxes */
+.article .highlight-box,
+.article .info-box,
+.article .note {
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-brand);
+  background: var(--color-surface-highlight);
+  padding: var(--s5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Executive summary emphasis */
+.article .resumo-executivo {
+  background: var(--color-surface-highlight);
+}
+
+/* Conclusion sections gradient */
+.article .conclusao-artigo,
+.article .conclusao-capital-giro {
+  background: linear-gradient(180deg, var(--color-surface-highlight), transparent);
+}
+
+/* CTA row */
+.article .cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin: var(--s6) 0;
+}
+
+/* Sources block */
+.article .sources {
+  background: var(--color-surface-muted);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--s4);
+}
+
+/* Performance hint for lazy images inside content */
+.article img[loading="lazy"] {
+  content-visibility: auto;
+}

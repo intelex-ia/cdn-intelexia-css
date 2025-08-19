@@ -1,0 +1,33 @@
+/*!
+ * cdn-intelexia — Table (scoped)
+ * Escopo: apenas dentro de .article
+ */
+.article .table {
+  margin: var(--s5) 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: auto;
+}
+
+.article .table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.article .table thead th {
+  background: var(--color-table-head-bg);
+  color: var(--color-table-head-text);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.875rem;
+}
+
+.article .table td {
+  padding: 0.875rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.article .table tr:nth-child(even) td {
+  background: var(--color-surface-alt);
+}

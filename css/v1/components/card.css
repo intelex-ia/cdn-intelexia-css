@@ -1,0 +1,28 @@
+/*!
+ * cdn-intelexia — Cards (scoped)
+ * Escopo: apenas dentro de .article
+ */
+.article .card-grid {
+  display: grid;
+  gap: var(--s4);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.article .card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--s4);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.article .card:hover {
+  transform: translateY(-2px);
+}
+
+.article .card h3 {
+  margin: 0 0 var(--s2) 0;
+  font-size: 1.125rem;
+}

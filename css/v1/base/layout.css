@@ -1,0 +1,18 @@
+/*!
+ * cdn-intelexia Layout helpers (scoped)
+ * Escopo: apenas dentro do conteúdo do post
+ */
+
+/* Container genérico opcional para blocos dentro do post */
+.article .container {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--s4);
+}
+
+/* Utilitário de largura total dentro do post quando necessário */
+.article .full-bleed {
+  width: 100%;
+  margin-inline: 0;
+  padding-inline: 0;
+}

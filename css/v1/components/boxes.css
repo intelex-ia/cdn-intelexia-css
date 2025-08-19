@@ -1,0 +1,22 @@
+/*!
+ * cdn-intelexia — Boxes (scoped)
+ * Escopo: apenas dentro de .article
+ * Observação: estilos base de .highlight-box, .info-box, .note já são definidos em components/article.css
+ */
+
+/* Variantes opcionais de ênfase por semântica */
+.article .note--primary,
+.article .highlight-box--primary { border-left-color: var(--color-primary); }
+
+.article .note--success,
+.article .highlight-box--success { border-left-color: var(--color-success); }
+
+/* Alias genérico para callouts adicionais */
+.article .callout {
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  background: var(--color-surface-highlight);
+  padding: var(--s5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}

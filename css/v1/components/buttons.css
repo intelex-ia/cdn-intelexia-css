@@ -1,0 +1,27 @@
+/*!
+ * cdn-intelexia — Buttons (scoped)
+ * Escopo: apenas dentro de .article
+ */
+.article .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.article .btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.article .btn--whatsapp {
+  background: var(--color-whatsapp-bg);
+  color: var(--color-whatsapp-text);
+  border-color: var(--color-whatsapp-border);
+}

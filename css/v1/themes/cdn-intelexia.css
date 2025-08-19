@@ -1,0 +1,38 @@
+/*!
+ * cdn-intelexia Theme Overrides (v1)
+ * Apply via: <article class="article" data-theme="cdn-intelexia">
+ * Scope: only inside article.article[data-theme="cdn-intelexia"]
+ */
+article.article[data-theme="cdn-intelexia"] {
+  /* Brand and semantic colors */
+  --color-brand: #002f6c;
+  --color-text: #182026;
+  --color-text-muted: #5f6b7a;
+
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-highlight: #fff9e6;
+  --color-surface-alt: #fcfdff;
+  --color-surface-muted: #fcfcff;
+
+  --color-border: #e6e8eb;
+
+  --color-success: #0f9d58;
+
+  /* Derived */
+  --color-primary: var(--color-brand);
+  --color-link: var(--color-brand);
+  --color-heading: var(--color-brand);
+
+  /* WhatsApp palette */
+  --color-whatsapp-bg: #e9f7f1;
+  --color-whatsapp-text: #0b5137;
+  --color-whatsapp-border: #bfe9d7;
+
+  /* Table head */
+  --color-table-head-bg: #f8fafc;
+  --color-table-head-text: #0f172a;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(16,24,40,0.06);
+}
