@@ -35,7 +35,15 @@ article.article {
   --color-table-head-bg: #f8fafc;
   --color-table-head-text: #0f172a;
 
+  --color-button-primary-text: #ffffff;
+
   --shadow-sm: 0 1px 2px rgba(16,24,40,0.06);
+
+  /* Typography families */
+  --font-family-base: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-weight-base: 400;
+  --font-weight-heading: 700;
 
   /* Typography scale (rem) */
   --fs-300: 0.95rem;
@@ -55,7 +63,12 @@ article.article {
   --s10: 2.5rem;
 
   /* Layout */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
+  --radius-base: 0.5rem;
+  --radius-sm: calc(var(--radius-base) * 0.5);
+  --radius-md: var(--radius-base);
+  --radius-lg: calc(var(--radius-base) * 1.5);
+  --radius-button: var(--radius-md);
+  --radius-card: var(--radius-md);
+  --radius-surface: var(--radius-md);
   --measure: 72ch;
 }

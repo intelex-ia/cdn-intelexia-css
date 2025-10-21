@@ -6,7 +6,7 @@ Este repositório publica `styles.min.css` para consumo via jsDelivr de forma r�
 
 - `styles.min.css` (na raiz) — bundle minificado pronto para produção
 - SRI calculado:  
-  `sha384-V38exks0JiM91ckUqa4WH88wyMAQ2OMt/vTZbZExF4rlK3W1DlkIVKrrbPWQuKgd`
+  `sha384-ng3fA4BJaQ0jwJGaMudUAizKJi2tHjHCrmiYRnTmTZVi3m7ItQfYwbdvglESzWHC`
 
 ## Como publicar (GitHub + jsDelivr)
 
@@ -21,7 +21,7 @@ Substitua `SEU_USUARIO` e `SEU_REPO`:
 ### Snippet de uso (com SRI)
 ```html
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/SEU_USUARIO/SEU_REPO@v1.0.0/styles.min.css" as="style" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SEU_USUARIO/SEU_REPO@v1.0.0/styles.min.css" integrity="sha384-V38exks0JiM91ckUqa4WH88wyMAQ2OMt/vTZbZExF4rlK3W1DlkIVKrrbPWQuKgd" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SEU_USUARIO/SEU_REPO@v1.0.0/styles.min.css" integrity="sha384-ng3fA4BJaQ0jwJGaMudUAizKJi2tHjHCrmiYRnTmTZVi3m7ItQfYwbdvglESzWHC" crossorigin="anonymous">
 ```
 
 ## Git (exemplo de comandos)

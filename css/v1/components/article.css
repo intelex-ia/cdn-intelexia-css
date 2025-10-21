@@ -28,6 +28,14 @@
   background: var(--color-badge-bg);
 }
 
+.article a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+.article a:hover {
+  text-decoration: none;
+}
+
 /* Headings spacing inside article content */
 .article h2 { margin: var(--s8) 0 var(--s3); }
 .article h3 { margin: var(--s6) 0 var(--s2); }
@@ -54,7 +62,7 @@
   border-left: 4px solid var(--color-brand);
   background: var(--color-surface-highlight);
   padding: var(--s5);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-surface);
   box-shadow: var(--shadow-sm);
 }
 
@@ -81,7 +89,7 @@
 .article .sources {
   background: var(--color-surface-muted);
   border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-surface);
   padding: var(--s4);
 }
 
