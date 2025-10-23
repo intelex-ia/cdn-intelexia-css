@@ -2,19 +2,19 @@
  * cdn-intelexia — Figure (scoped)
  * Escopo: apenas dentro de .article
  */
-.article .figure {
+.article .itx-figure {
   margin-top: var(--s5);
   text-align: center;
 }
 
-.article .figure img {
+.article .itx-figure img {
   max-width: 100%;
   height: auto;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
 
-.article .figure figcaption {
+.article .itx-figure figcaption {
   color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-top: 0.5rem;

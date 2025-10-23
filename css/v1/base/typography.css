@@ -3,14 +3,17 @@
  * Escopo: apenas dentro de .article
  */
 .article {
-  max-width: var(--measure);
+  width: 100%;
+  max-width: var(--layout-max-width);
   margin-inline: auto;
-  padding-inline: var(--s4);
+  padding: var(--layout-padding);
   color: var(--color-text);
   background: var(--color-bg);
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-base);
   line-height: 1.6;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Headings */
@@ -35,5 +38,8 @@
 
 /* Responsive */
 @media (min-width: 1024px) {
-  .article h1 { font-size: calc(var(--fs-800) * 1.1); }
+  .article {
+    padding: calc(var(--layout-padding) * 1.25);
+  }
+  .article h1 { font-size: calc(var(--fs-800) * 1.05); }
 }

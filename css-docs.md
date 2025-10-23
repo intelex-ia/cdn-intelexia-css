@@ -1,13 +1,14 @@
-# cdn-intelexia — Documentação de Uso (Blog Post WordPress)
+﻿# cdn-intelexia â€” DocumentaÃ§Ã£o de Uso (Blog Post WordPress)
+  - Tokens extras úteis: `--layout-max-width`, `--layout-padding`, `--color-warning-bg`, `--color-warning-border`.
 
-Objetivo: padronizar o CSS dos artigos com escopo restrito ao conteúdo do post no WordPress, permitindo troca global de cores/tema por cliente via variáveis CSS (Custom Properties).
+Objetivo: padronizar o CSS dos artigos com escopo restrito ao conteÃºdo do post no WordPress, permitindo troca global de cores/tema por cliente via variÃ¡veis CSS (Custom Properties).
 
 ---
 
-## Regra 1 — Escopo obrigatório
-- O CSS só se aplica ao conteúdo do post.
-- Todos os seletores são escopados com `.article`.
-- Tokens e temas são definidos no próprio wrapper do post para não vazar para header/footer/sidebar.
+## Regra 1 â€” Escopo obrigatÃ³rio
+- O CSS sÃ³ se aplica ao conteÃºdo do post.
+- Todos os seletores sÃ£o escopados com `.article`.
+- Tokens e temas sÃ£o definidos no prÃ³prio wrapper do post para nÃ£o vazar para header/footer/sidebar.
 
 Wrapper exigido no template Single Post (Elementor):
 ```html
@@ -16,7 +17,7 @@ Wrapper exigido no template Single Post (Elementor):
 </article>
 ```
 
-Carregamento do CSS (Elementor → Custom Code):
+Carregamento do CSS (Elementor â†’ Custom Code):
 - Conditions: `singular/posts` APENAS.
 - Insira os links de CSS no <head> conforme a ordem de import abaixo.
 
@@ -40,7 +41,7 @@ Arquivos hospedados no CDN (exemplo de path):
       buttons.css
       table.css
       card.css
-      figure.css
+      itx-figure.css
       boxes.css
       utilities.css
 ```
@@ -48,24 +49,24 @@ Arquivos hospedados no CDN (exemplo de path):
 Ordem de import recomendada (no <head> e condicionado a `singular/posts`):
 ```html
 <!-- Tokens base (escopados ao article) -->
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/tokens/core.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/tokens/core.css">
 
 <!-- Base -->
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/base/reset.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/base/typography.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/base/layout.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/base/reset.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/base/typography.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/base/layout.css">
 
 <!-- Componentes -->
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/article.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/buttons.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/table.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/card.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/figure.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/boxes.css">
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/components/utilities.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/article.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/buttons.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/table.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/card.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/itx-figure.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/boxes.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/components/utilities.css">
 
-<!-- Tema do cliente (override de variáveis) -->
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/themes/cdn-intelexia.css">
+<!-- Tema do cliente (override de variÃ¡veis) -->
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/themes/cdn-intelexia.css">
 ```
 
 ---
@@ -75,129 +76,122 @@ Ordem de import recomendada (no <head> e condicionado a `singular/posts`):
 - Tokens (base) definidos no wrapper do post:
   - Arquivo: `css/v1/tokens/core.css`
   - Seletor: `article.article { ... }`
-  - Variáveis semânticas de cor, tipografia, espaçamentos, raios e sombras.
+  - VariÃ¡veis semÃ¢nticas de cor, tipografia, espaÃ§amentos, raios e sombras.
 
-- Tema por cliente (override das variáveis semânticas):
+- Tema por cliente (override das variÃ¡veis semÃ¢nticas):
   - Arquivo: `css/v1/themes/cdn-intelexia.css`
   - Seletor: `article.article[data-theme="cdn-intelexia"] { ... }`
-  - Ativação: atributo `data-theme="cdn-intelexia"` no `<article class="article">`.
+  - AtivaÃ§Ã£o: atributo `data-theme="cdn-intelexia"` no `<article class="article">`.
 
-Princípios:
-- Componentes não usam cores HEX diretamente; sempre `var(--color-*)`.
-- Para trocar o cliente: crie `themes/cliente-x.css`, ajuste variáveis e mude `data-theme="cliente-x"` no wrapper.
+PrincÃ­pios:
+- Componentes nÃ£o usam cores HEX diretamente; sempre `var(--color-*)`.
+- Para trocar o cliente: crie `themes/cliente-x.css`, ajuste variÃ¡veis e mude `data-theme="cliente-x"` no wrapper.
 
 ---
 
 ## Tags suportadas e regras de aplicação (sempre dentro de `.article`)
 
 - `article.article`
-  - Papel: wrapper do post; define tokens/tema e largura.
-  - Propriedades: `max-width: var(--measure)`, `padding-inline: var(--s4)`.
+  - Papel: wrapper do post; centraliza e aplica o layout padrão.
+  - Propriedades: `max-width: var(--layout-max-width)`, `padding: var(--layout-padding)`, `background: var(--color-bg)`, `box-shadow: var(--shadow-sm)`.
   - Atributos: `itemscope itemtype="https://schema.org/Article"`, `data-theme="cdn-intelexia"`.
 
 - `h1`
-  - Uso: título do post (único).
+  - Uso: título principal (único).
   - Regra: `font-size: var(--fs-800)`, `line-height: 1.2`, cor `var(--color-heading)`.
-  - Responsivo (≥1024px): `h1` aumenta 10%.
 
 - `h2`, `h3`
   - Uso: seções/subseções.
-  - Regras: cor `var(--color-heading)`.
-    - `h2 { margin: var(--s8) 0 var(--s3); font-size: var(--fs-700) }`
-    - `h3 { margin: var(--s6) 0 var(--s2); font-size: var(--fs-600) }`
+  - Regras: cor `var(--color-heading)` e margens definidas em `components/article.css` (`var(--s6)` e `var(--s5)`).
 
 - `p`
   - Regra: `font-size: var(--fs-400)`, `line-height: 1.7`, `margin: var(--s3) 0`.
 
 - `ul`, `ol`, `li`
-  - Regra: `margin: var(--s3) 0`, `padding-inline-start: 1.2rem`.
+  - Regra: `margin: var(--s3) 0 var(--s4)`, `padding-inline-start: 1.4rem`.
 
 - `a`
-  - Regra: herda cor de texto; para botões, use classes `.btn`.
+  - Links herdam `var(--color-link)` e ganham peso 600. Para CTAs utilize `.itx-btn` e modificadores (`.itx-btn--primary`, `.itx-btn--whatsapp`).
 
 - `figure`, `img`, `figcaption`
-  - `figure.figure`: centraliza e ajusta margens.
-  - `img`: `border-radius: var(--radius-md)`, `box-shadow: var(--shadow-sm)`.
-  - `figcaption`: `color: var(--color-text-muted)`, `font-size: 0.9rem`.
+  - Use quando precisar de legenda. O helper `.itx-figure` centraliza e aplica sombra/raio.
 
-- `table`, `thead`, `tbody`, `tr`, `th`, `td`
-  - Recomendado envolver em `<figure class="table">` para borda/scroll.
-  - `thead th`: fundo `--color-table-head-bg`, texto `--color-table-head-text`, padding `0.875rem`.
-  - `td`: padding `0.875rem`, borda-top 1px `--color-border`.
-  - Linhas pares (tbody): fundo `--color-surface-alt`.
+- Tabelas (`.itx-table`)
+  - Envolva o `<table>` em `<figure class="itx-table">` para obter borda, scroll horizontal e cabeçalho destacado (`--color-table-head-bg`).
 
-- `blockquote` (opcional)
-  - Pode reutilizar `.highlight-box` para ênfase visual.
+- Blocos de destaque
+  - `.itx-highlight-box`, `.itx-info-box`, `.itx-note` aplicam o estilo de callout com borda lateral de 6 px.
+  - `.itx-callout` gera o bloco institucional / CTA centralizado (rodapé).
 
-- `strong`, `em`, `small`, `code`, `pre`, `hr`
-  - `hr` com classe `.hr`: altura `1px`, fundo `--color-border`, margem `--s8`.
+- Utilitários
+  - `.itx-u-*` (espaçamentos, alinhamento, conteúdo oculto) seguem prefixo `itx-` para evitar conflitos com temas.
 
 ---
 
 ## Classes de componentes (dentro de `.article`)
 
-- `.kicker`: texto superior (categoria/subcategoria).
-- `.meta`: linha meta (data, badges) com flex layout.
-- `.badge`: chip com borda e fundo superfície.
-- `.highlight-box`, `.info-box`, `.note`: caixas com borda + faixa esquerda 4px `--color-brand`, fundo `--color-surface-highlight`.
-- `.resumo-executivo`: bloco de resumo com fundo `--color-surface-highlight`.
-- `.cta-row`: linha de CTAs com `display: flex`, `gap` e `wrap`.
-- `.btn`, `.btn--primary`, `.btn--whatsapp`: botões e variantes semânticas.
-- `.table`: contêiner com borda/scroll; estilos de `thead` e `tbody`.
-- `.card-grid`, `.card`: grid responsivo de cards; hover eleva 2px.
-- `.figure`: estilos para imagens e legendas.
-- `.sources`: bloco de fontes com fundo `--color-surface-muted` e borda tracejada.
-- `.conclusao-*`: gradiente leve para seções finais.
-- `.hr`: separador fino.
-- `.container`: helper de largura (layout).
-- `.full-bleed`: seção full width dentro do post.
+- `.itx-kicker`: texto superior (categoria/subcategoria).
+- `.itx-meta`: linha itx-meta (data, itx-badges) com flex layout.
+- `.itx-badge`: chip com borda e fundo superfÃ­cie.
+- `.itx-highlight-box`, `.itx-info-box`, `.itx-note`: caixas com borda lateral de 6px; fundos controlados por `--color-surface-highlight`, `--color-surface-alt` e `--color-warning-bg`.
+- `.itx-resumo-executivo`: bloco de resumo com fundo `--color-surface-highlight`.
+- `.itx-cta-row`: linha de CTAs com `display: flex`, `gap` e `wrap`.
+- `.itx-btn`, `.itx-btn--primary`, `.itx-btn--whatsapp`: botÃµes e variantes semÃ¢nticas.
+- `.itx-table`: contêiner com borda/scroll; destaca `thead` usando `--color-table-head-bg`.
+- `.itx-card-grid`, `.itx-card`: grid responsivo de cards com sombra média e hover suave.
+- `.itx-figure`: estilos para imagens e legendas.
+- `.itx-sources`: bloco de fontes com fundo `--color-surface-muted` e borda sólida.
+- `.itx-conclusao-*`: gradiente leve para seções finais.
+- `.itx-hr`: separador fino.
+- `.itx-container`: helper de largura (layout).
+- `.itx-full-bleed`: seÃ§Ã£o full width dentro do post.
+
 
 Variantes/Utilitários:
-- `.highlight-box--primary`, `.note--primary`: borda-esquerda com `--color-primary`.
-- `.highlight-box--success`, `.note--success`: borda-esquerda com `--color-success`.
-- `.u-mb-0`, `.u-mb-s2`, `.u-mb-s3`, `.u-mb-s4`, `.u-mt-s3`, `.u-p-s4`
-- `.u-text-center`, `.u-text-right`, `.u-visually-hidden`
-
+- `.itx-highlight-box--primary`, `.itx-note--primary`: borda-esquerda com `--color-primary`.
+- `.itx-highlight-box--success`, `.itx-note--success`: borda-esquerda com `--color-success` e fundo `--color-whatsapp-bg`.
+- `.itx-u-mb-0`, `.itx-u-mb-s2`, `.itx-u-mb-s3`, `.itx-u-mb-s4`, `.itx-u-mt-s3`, `.itx-u-p-s4`
+- `.itx-u-text-center`, `.itx-u-text-right`, `.itx-u-visually-hidden`
 ---
 
-## Integração no Elementor (passo a passo)
+## IntegraÃ§Ã£o no Elementor (passo a passo)
 
 1) Template Single Post:
-   - Envolver o widget “Post Content” com um Container/Section:
+   - Envolver o widget â€œPost Contentâ€ com um itx-container/Section:
      - Tag: `article`
      - CSS Classes: `article`
      - Atributos: `itemscope itemtype="https://schema.org/Article" data-theme="cdn-intelexia"`
 
-2) Custom Code (Elementor → Custom Code):
+2) Custom Code (Elementor â†’ Custom Code):
    - Adicionar cada `<link rel="stylesheet" ...>` conforme ordem de import.
    - Definir Condition: `singular/posts` (apenas posts).
 
-3) Conteúdo:
-   - Usar as classes conforme documentação acima.
-   - Manter hierarquia de headings (H1 único; depois H2/H3).
+3) ConteÃºdo:
+   - Usar as classes conforme documentaÃ§Ã£o acima.
+   - Manter hierarquia de headings (H1 Ãºnico; depois H2/H3).
 
 Exemplo simplificado dentro de `<article class="article" ...>`:
 ```html
-<div class="kicker">Categoria • Subcategoria</div>
-<h1>Título do Post</h1>
-<div class="meta">
-  <span class="badge">Sem comentários</span>
+<div class="itx-kicker">Categoria â€¢ Subcategoria</div>
+<h1>TÃ­tulo do Post</h1>
+<div class="itx-meta">
+  <span class="itx-badge">Sem comentÃ¡rios</span>
   <time datetime="2025-01-01">1 jan 2025</time>
 </div>
 
-<section class="highlight-box resumo-executivo">
-  <strong>Ponto Central —</strong> Resumo do artigo em 2-3 frases.
+<section class="itx-highlight-box itx-resumo-executivo">
+  <strong>Ponto Central â€”</strong> Resumo do artigo em 2-3 frases.
 </section>
 
-<div class="cta-row">
-  <a class="btn btn--whatsapp" href="#">💬 Falar no WhatsApp</a>
-  <a class="btn btn--primary" href="#ancora">Chamada Principal</a>
+<div class="itx-cta-row">
+  <a class="itx-btn itx-btn--whatsapp" href="#">ðŸ’¬ Falar no WhatsApp</a>
+  <a class="itx-btn itx-btn--primary" href="#ancora">Chamada Principal</a>
 </div>
 
-<h2 id="secao-1">Seção</h2>
-<p>Parágrafo com conteúdo.</p>
+<h2 id="secao-1">SeÃ§Ã£o</h2>
+<p>ParÃ¡grafo com conteÃºdo.</p>
 
-<figure class="table">
+<figure class="itx-table">
   <table>
     <thead><tr><th>Coluna 1</th><th>Coluna 2</th></tr></thead>
     <tbody>
@@ -205,19 +199,19 @@ Exemplo simplificado dentro de `<article class="article" ...>`:
       <tr><td>Valor 3</td><td>Valor 4</td></tr>
     </tbody>
   </table>
-</figure>
+</itx-figure>
 
-<figure class="figure">
-  <img src="..." width="1200" height="628" alt="Descrição detalhada" loading="lazy" decoding="async">
+<itx-figure class="itx-figure">
+  <img src="..." width="1200" height="628" alt="DescriÃ§Ã£o detalhada" loading="lazy" decoding="async">
   <figcaption>Legenda da imagem</figcaption>
-</figure>
+</itx-figure>
 
-<aside class="info-box note">
-  <strong>Observação:</strong> Nota importante contextualizada.
+<aside class="itx-info-box note">
+  <strong>ObservaÃ§Ã£o:</strong> Nota importante contextualizada.
 </aside>
 
-<section class="sources">
-  <h2>Fontes de referência</h2>
+<section class="itx-sources">
+  <h2>Fontes de referÃªncia</h2>
   <ul>
     <li><a href="#" rel="noopener nofollow">Fonte 1</a></li>
   </ul>
@@ -226,48 +220,49 @@ Exemplo simplificado dentro de `<article class="article" ...>`:
 
 ---
 
-## Boas práticas, Acessibilidade e Performance
-- Tipografia base mínima: `--fs-400 >= 1.0625rem`.
-- Links com texto descritivo; evitar “clique aqui”.
-- Imagens secundárias com `loading="lazy"`, `decoding="async"`, `width`/`height` definidos.
-- Usar apenas variáveis CSS nos componentes (não usar valores HEX diretos).
+## Boas prÃ¡ticas, Acessibilidade e Performance
+- Tipografia base mÃ­nima: `--fs-400 >= 1.0625rem`.
+- Links com texto descritivo; evitar â€œclique aquiâ€.
+- Imagens secundÃ¡rias com `loading="lazy"`, `decoding="async"`, `width`/`height` definidos.
+- Usar apenas variÃ¡veis CSS nos componentes (nÃ£o usar valores HEX diretos).
 - Evitar sobrescrever estilos fora do `.article`.
 
 ---
 
 ## Versionamento
-- Versão atual: `/css/v1/…`
-- Mudanças com quebra de compatibilidade devem ir para `/css/v2/…`.
-- Manter compatibilidade retroativa sempre que possível.
+- VersÃ£o atual: `/css/v1/â€¦`
+- MudanÃ§as com quebra de compatibilidade devem ir para `/css/v2/â€¦`.
+- Manter compatibilidade retroativa sempre que possÃ­vel.
 
 ---
 
 ## Criar um novo tema de cliente
 1) Copie `css/v1/themes/cdn-intelexia.css` para `css/v1/themes/cliente-x.css`.
-2) Ajuste variáveis necessárias (`--color-brand`, `--color-heading`, `--color-surface-highlight`, etc.).
+2) Ajuste variÃ¡veis necessÃ¡rias (`--color-brand`, `--color-heading`, `--color-surface-highlight`, etc.).
 3) No template, troque `data-theme="cdn-intelexia"` por `data-theme="cliente-x"` no `<article class="article">`.
 
 ---
 
-## Uso com bundle (produção)
-- Em produção, recomenda-se incluir apenas o bundle minificado:
+## Uso com bundle (produÃ§Ã£o)
+- Em produÃ§Ã£o, recomenda-se incluir apenas o bundle minificado:
 ```html
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/bundle/cdn-intelexia.min.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/bundle/cdn-intelexia.min.css">
 ```
-- Em homologação/depuração, pode-se usar o bundle legível:
+- Em homologaÃ§Ã£o/depuraÃ§Ã£o, pode-se usar o bundle legÃ­vel:
 ```html
-<link rel="stylesheet" href="https://cdn.seu-dominio.com/css/v1/bundle/cdn-intelexia.css">
+<link rel="stylesheet" href="https://cdn.seitx-u-dominio.com/css/v1/bundle/cdn-intelexia.css">
 ```
-- Observação: o bundle já respeita a ordem correta (tokens → base → componentes → tema). Mantenha o wrapper do post com `data-theme="cdn-intelexia"`.
+- ObservaÃ§Ã£o: o bundle jÃ¡ respeita a ordem correta (tokens â†’ base â†’ componentes â†’ tema). Mantenha o wrapper do post com `data-theme="cdn-intelexia"`.
 
 ---
 
-Checklist rápido de validação
+Checklist rÃ¡pido de validaÃ§Ã£o
 - [ ] CSS carregado apenas em `singular/posts`.
 - [ ] Wrapper `<article class="article" ... data-theme="...">` presente.
-- [ ] H1 único, hierarquia H2/H3 correta.
-- [ ] Tabela com `<thead>` obrigatório.
+- [ ] H1 Ãºnico, hierarquia H2/H3 correta.
+- [ ] Tabela com `<thead>` obrigatÃ³rio.
 - [ ] Imagens com `alt`, `width`, `height`.
-- [ ] Caixas de destaque com classes `.highlight-box`, `.info-box` ou `.note`.
-- [ ] CTAs com `.btn`, `.btn--primary` ou `.btn--whatsapp`.
-- [ ] Fontes listadas em `.sources`.
+- [ ] Caixas de destaque com classes `.itx-highlight-box`, `.itx-info-box` ou `.note`.
+- [ ] CTAs com `.itx-btn`, `.itx-btn--primary` ou `.itx-btn--whatsapp`.
+- [ ] Fontes listadas em `.itx-sources`.
+

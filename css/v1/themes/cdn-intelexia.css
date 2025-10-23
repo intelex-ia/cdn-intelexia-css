@@ -5,34 +5,36 @@
  */
 article.article[data-theme="cdn-intelexia"] {
   /* Brand and semantic colors */
-  --color-brand: #002f6c;
-  --color-text: #182026;
-  --color-text-muted: #5f6b7a;
+  --color-brand: #0070c0;
+  --color-text: #1a1a1a;
+  --color-text-muted: #4b5563;
 
   --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-surface-highlight: #fff9e6;
-  --color-surface-alt: #fcfdff;
-  --color-surface-muted: #fcfcff;
+  --color-surface-highlight: #e8f3fb;
+  --color-surface-alt: #f7fafc;
+  --color-surface-muted: #eef2f6;
 
-  --color-border: #e6e8eb;
+  --color-border: #d0d5dd;
 
-  --color-success: #0f9d58;
+  --color-success: #31be6e;
 
   /* Derived */
   --color-primary: var(--color-brand);
   --color-link: var(--color-brand);
-  --color-heading: var(--color-brand);
+  --color-heading: #002f6c;
 
   /* WhatsApp palette */
-  --color-whatsapp-bg: #e9f7f1;
-  --color-whatsapp-text: #0b5137;
-  --color-whatsapp-border: #bfe9d7;
+  --color-whatsapp-bg: #e6f6ef;
+  --color-whatsapp-text: #0f5132;
+  --color-whatsapp-border: #9adcb8;
+  --color-warning-bg: #fef3f2;
+  --color-warning-border: #f97316;
 
   /* Table head */
-  --color-table-head-bg: #f8fafc;
-  --color-table-head-text: #0f172a;
+  --color-table-head-bg: #e8f3fb;
+  --color-table-head-text: #002f6c;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(16,24,40,0.06);
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.08);
 }

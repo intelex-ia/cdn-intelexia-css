@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * cdn-intelexia CSS Tokens (v1)
  * Scope: only inside article.article
  */
@@ -7,68 +7,75 @@ article.article {
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --color-text: #182026;
-  --color-text-muted: #5f6b7a;
+  --color-text: #1a1a1a;
+  --color-text-muted: #4b5563;
 
   --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-surface-alt: #fcfdff;
-  --color-surface-muted: #fcfcff;
-  --color-surface-highlight: #fff9e6;
+  --color-surface-alt: #f7fafc;
+  --color-surface-muted: #eef2f6;
+  --color-surface-highlight: #e8f3fb;
 
-  --color-border: #e6e8eb;
+  --color-border: #d0d5dd;
 
-  --color-brand: #002f6c;
+  --color-brand: #0070c0;
   --color-primary: var(--color-brand);
-  --color-success: #0f9d58;
+  --color-success: #31be6e;
 
-  --color-link: var(--color-brand);
-  --color-heading: var(--color-brand);
+  --color-link: #0070c0;
+  --color-heading: #002f6c;
 
-  --color-badge-bg: #ffffff;
-  --color-badge-border: var(--color-border);
+  --color-badge-bg: #e8f3fb;
+  --color-badge-border: #b6d7f5;
 
-  --color-whatsapp-bg: #e9f7f1;
-  --color-whatsapp-text: #0b5137;
-  --color-whatsapp-border: #bfe9d7;
+  --color-whatsapp-bg: #e6f6ef;
+  --color-whatsapp-text: #0f5132;
+  --color-whatsapp-border: #9adcb8;
 
-  --color-table-head-bg: #f8fafc;
-  --color-table-head-text: #0f172a;
+  --color-warning-bg: #fef3f2;
+  --color-warning-border: #f97316;
+
+  --color-table-head-bg: #e8f3fb;
+  --color-table-head-text: #002f6c;
 
   --color-button-primary-text: #ffffff;
 
-  --shadow-sm: 0 1px 2px rgba(16,24,40,0.06);
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 112, 192, 0.12);
 
   /* Typography families */
-  --font-family-base: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --font-family-heading: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-family-base: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: "Segoe UI Semibold", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-weight-base: 400;
   --font-weight-heading: 700;
 
   /* Typography scale (rem) */
   --fs-300: 0.95rem;
-  --fs-400: 1.0625rem;
-  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
   --fs-600: 1.5rem;
-  --fs-700: 2rem;
-  --fs-800: 2.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2.25rem;
 
   /* Spacing (8px scale) */
   --s2: 0.5rem;
   --s3: 0.75rem;
-  --s4: 1rem;
-  --s5: 1.25rem;
-  --s6: 1.5rem;
-  --s8: 2rem;
-  --s10: 2.5rem;
+  --s4: 1.5rem;
+  --s5: 2rem;
+  --s6: 2.25rem;
+  --s8: 2.5rem;
+  --s10: 3rem;
 
   /* Layout */
-  --radius-base: 0.5rem;
+    --layout-max-width: min(100%, 960px);
+  --layout-padding: 1.5rem;
+
+  --radius-base: 0.75rem;
   --radius-sm: calc(var(--radius-base) * 0.5);
   --radius-md: var(--radius-base);
   --radius-lg: calc(var(--radius-base) * 1.5);
   --radius-button: var(--radius-md);
   --radius-card: var(--radius-md);
   --radius-surface: var(--radius-md);
-  --measure: 72ch;
+  --measure: 100%;
 }

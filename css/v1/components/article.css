@@ -1,10 +1,11 @@
-/*!
- * cdn-intelexia — Article components (scoped)
+﻿/*!
+ * cdn-intelexia â€” Article components (scoped)
  * Escopo: apenas dentro de .article
  */
 
 /* Header/Meta/Kicker */
-.article .kicker {
+
+.article .itx-kicker {
   color: var(--color-text-muted);
   font-size: var(--fs-300);
   letter-spacing: 0.02em;
@@ -12,7 +13,7 @@
   margin: var(--s4) 0 var(--s2);
 }
 
-.article .meta {
+.article .itx-meta {
   display: flex;
   gap: var(--s3);
   align-items: center;
@@ -21,7 +22,7 @@
   margin: var(--s2) 0 var(--s6);
 }
 
-.article .badge {
+.article .itx-badge {
   border: 1px solid var(--color-badge-border);
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
@@ -30,65 +31,93 @@
 
 .article a {
   color: var(--color-link);
-  text-decoration: underline;
+  font-weight: 600;
+  text-decoration: none;
 }
 .article a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* Headings spacing inside article content */
-.article h2 { margin: var(--s8) 0 var(--s3); }
-.article h3 { margin: var(--s6) 0 var(--s2); }
+.article h2 {
+  margin: var(--s6) 0 var(--s3);
+  font-size: var(--fs-700);
+  color: var(--color-heading);
+}
+.article h3 {
+  margin: var(--s5) 0 var(--s3);
+  font-size: var(--fs-600);
+  color: var(--color-heading);
+}
 
 /* Lists */
 .article ul,
 .article ol {
-  margin: var(--s3) 0;
-  padding-inline-start: 1.2rem;
+  margin: var(--s3) 0 var(--s4);
+  padding-inline-start: 1.4rem;
 }
 
 /* Horizontal rule helper */
-.article .hr {
+.article .itx-hr {
   height: 1px;
   background: var(--color-border);
   margin: var(--s8) 0;
 }
 
 /* Info/highlight/note boxes */
-.article .highlight-box,
-.article .info-box,
-.article .note {
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-brand);
+.article .itx-highlight-box,
+.article .itx-info-box,
+.article .itx-note {
+  border-left: 6px solid var(--color-primary);
   background: var(--color-surface-highlight);
-  padding: var(--s5);
+  padding: clamp(1.5rem, 2vw, 2rem);
   border-radius: var(--radius-surface);
   box-shadow: var(--shadow-sm);
+  margin: var(--s5) 0;
+}
+
+.article .itx-info-box {
+  background: var(--color-surface-alt);
+  border-left-color: var(--color-heading);
+}
+
+.article .itx-note {
+  background: var(--color-warning-bg);
+  border-left-color: var(--color-warning-border);
 }
 
 /* Executive summary emphasis */
-.article .resumo-executivo {
+.article .itx-resumo-executivo {
   background: var(--color-surface-highlight);
 }
 
 /* Conclusion sections gradient */
-.article .conclusao-artigo,
-.article .conclusao-capital-giro {
+.article .itx-conclusao-artigo,
+.article .itx-conclusao-capital-giro {
   background: linear-gradient(180deg, var(--color-surface-highlight), transparent);
 }
 
 /* CTA row */
-.article .cta-row {
+.article .itx-cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s3);
   margin: var(--s6) 0;
 }
 
+.article .itx-info-box .itx-cta-row {
+  margin-top: var(--s3);
+}
+
+.article .itx-info-box p:last-child {
+  margin-bottom: 0;
+}
+
+
 /* Sources block */
-.article .sources {
+.article .itx-sources {
   background: var(--color-surface-muted);
-  border: 1px dashed var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-surface);
   padding: var(--s4);
 }
@@ -97,3 +126,4 @@
 .article img[loading="lazy"] {
   content-visibility: auto;
 }
+

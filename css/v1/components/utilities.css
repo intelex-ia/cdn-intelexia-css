@@ -4,19 +4,19 @@
  */
 
 /* Espaçamentos rápidos */
-.article .u-mb-0 { margin-bottom: 0 !important; }
-.article .u-mb-s2 { margin-bottom: var(--s2) !important; }
-.article .u-mb-s3 { margin-bottom: var(--s3) !important; }
-.article .u-mb-s4 { margin-bottom: var(--s4) !important; }
-.article .u-mt-s3 { margin-top: var(--s3) !important; }
-.article .u-p-s4  { padding: var(--s4) !important; }
+.article .itx-u-mb-0 { margin-bottom: 0 !important; }
+.article .itx-u-mb-s2 { margin-bottom: var(--s2) !important; }
+.article .itx-u-mb-s3 { margin-bottom: var(--s3) !important; }
+.article .itx-u-mb-s4 { margin-bottom: var(--s4) !important; }
+.article .itx-u-mt-s3 { margin-top: var(--s3) !important; }
+.article .itx-u-p-s4  { padding: var(--s4) !important; }
 
 /* Alinhamento de texto */
-.article .u-text-center { text-align: center !important; }
-.article .u-text-right  { text-align: right !important; }
+.article .itx-u-text-center { text-align: center !important; }
+.article .itx-u-text-right  { text-align: right !important; }
 
 /* Visually hidden (acessibilidade) */
-.article .u-visually-hidden {
+.article .itx-u-visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
